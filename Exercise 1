@@ -1,0 +1,21 @@
+# 1. Use "women" dataframe in package 'datasets'. Find the number of women with height more than average, but weight less than average.
+# 2. Create a data frame of 15 Indian cities and their Create a data frame of 15 Indian cities and their population size. 
+
+getwd()
+
+setwd("C:\Users\RHEA\Desktop\MICA\AMMA")
+
+install.packages("data.table")
+install.packages("datasets")
+View(women)
+htavg = mean(women$height)
+wtavg = mean(women$weight)
+n = 0
+for(i in 1:length(women$height))
+  if(women$height[i]>htavg & women$weight[i]<wtavg) 
+    n=n+1
+
+getwd()
+setwd("C:\Users\RHEA\Desktop\MICA\AMMA")
+input_popcity.df<-read.csv("Population city data.csv",header=T)
+View(input_popcity.df)
